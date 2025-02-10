@@ -1,0 +1,84 @@
+/* Algemene stijl voor het hele lichaam */
+body {
+    font-family: "Courier New", monospace;
+    background: linear-gradient(to right, #ff4d6d, #ff758f);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Verbergen van elementen */
+.hidden {
+    display: none;
+}
+
+/* Stijl voor knoppen */
+button {
+    background-color: #ff4d6d;
+    border: 2px solid white;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1e45;
+}
+
+/* Stijl voor textarea (dagboek tekst) */
+textarea {
+    width: 80%;
+    height: 150px;
+    margin-top: 20px;
+    background-color: #fff1f1;
+    border: 2px solid #ff4d6d;
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Stijl voor inputvelden en bestandsupload */
+input[type="file"], input[type="password"] {
+    background-color: #fff1f1;
+    border: 2px solid #ff4d6d;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Stijl voor de tekst die opgeslagen dagboekberichten toont */
+#savedDiary p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: "Courier New", monospace;
+    color: #ffb3c6;
+    margin-bottom: 15px;
+}
+
+/* Stijl voor de afbeelding weergave (media content) */
+#mediaContent img {
+    margin: 10px;
+    border: 2px solid #ff4d6d;
+    border-radius: 10px;
+}
+
+/* Knoppen voor de categorieën in foto’s en video’s */
+button {
+    margin: 5px;
+    background-color: #ff4d6d;
+    border: 2px solid white;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1e45;
+}

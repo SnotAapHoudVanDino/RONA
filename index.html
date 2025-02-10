@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geheime Website</title>
+
+    <!-- Verbind je CSS-bestand -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Verbind je Firebase-scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+</head>
+<body>
+    <div id="login">
+        <h2>Voer de toegangscode in:</h2>
+        <input type="password" id="codeInput">
+        <button onclick="checkCode()">Inloggen</button>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <h1>Welkom!</h1>
+        <button onclick="showDiary()">Dagboek</button>
+        <button onclick="showMedia()">Foto’s & Video’s</button>
+
+        <div id="diarySection" class="hidden">
+            <h2>Dagboek</h2>
+            <textarea id="diaryText" placeholder="Schrijf hier je gedachten..."></textarea>
+            <button onclick="saveDiary()">Opslaan</button>
+            <div id="savedDiary"></div>
+        </div>
+
+        <div id="mediaSection" class="hidden">
+            <h2>Foto’s & Video’s</h2>
+            <button onclick="showCategory('zomaar')">Zomaar Jij en Ik</button>
+            <button onclick="showCategory('zomervakantie')">Zomervakantie</button>
+            <button onclick="showCategory('kerstvakantie')">Kerstvakantie</button>
+            <button onclick="showCategory('opreis')">Op Reis</button>
+
+            <input type="file" id="fileUpload" multiple>
+            <button onclick="uploadFile()">Uploaden</button>
+
+            <div id="mediaContent"></div>
+        </div>
+    </div>
+
+    <!-- Verbind je JavaScript-bestand -->
+    <script src="js/script.js"></script>
+</body>
+</html>
